@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="InContainer">
+
+            <ul>
+
+                <li>
+                    <a href="">
+                        <span class="Icon-SideBar"><img src="assets/icon/IconTask.svg" alt="LogoOverview" ></span>
+                        <span class="Name-SideBar"><span class="Task">Task Mind</span></span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#" data-id="Overview">
+                        <span class="Icon-SideBar" ><img src="assets/icon/overview.svg" alt="LogoOverview"></span>
+                        <span class="Name-SideBar">OverView</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-id="TeamsManagement" >
+                        <span class="Icon-SideBar"><img src="assets/icon/Team.svg" alt="icon/Team"></span>
+                        <span class="Name-SideBar">Teams Management</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-id="EmployesManagement">
+                        <span class="Icon-SideBar"><img src="assets/icon/Employes2.svg" alt="icon/Employes"></span>
+                        <span class="Name-SideBar">Employes Management</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-id="TaskManagement">
+                        <span class="Icon-SideBar"><img src="assets/icon/Task.svg" alt="icon/Task"></span>
+                        <span class="Name-SideBar">Task Management</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-id="Meeting">
+                        <span class="Icon-SideBar"><img src="assets/icon/Video.svg" alt="icon/Video"></span>
+                        <span class="Name-SideBar">Meetings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-id="AiAssistant">
+                        <span class="Icon-SideBar"><img src="assets/icon/Ai.svg" alt=""></span>
+                        <span class="Name-SideBar">Ai Assistant</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-id="Settings">
+                        <span class="Icon-SideBar"><img src="assets/icon/Settings.svg" alt="icon/Settings"></span>
+                        <span class="Name-SideBar">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-id="LogOut">
+                        <span class="Icon-SideBar"><img src="assets/icon/Log-Out.svg" alt="icon/Log-Out"></span>
+                        <span class="Name-SideBar">LogOut</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="Main">
+        <div class="Topbar">
+            <div class="ToggleMenu">
+                <img src="assets/icon/Menu.svg" alt="ToggleMenu">
+            </div>
+
+            <div class="Search">
+                <label>
+                    <input type="search" placeholder="Search here">
+                    <img src="assets/icon/Search.svg" alt="icon/Search">
+                </label>
+            </div>
+             
+            <div class="UserEdit">
+                <img src="assets/icon/User.svg" alt="icon/User">
+            </div>
+        </div>
+
+        <!--==================================OverView============================================-->
+
+        <div class="ContentItem" id="Overview">
+            <div class="CardBox">
+            <div class="Card">
+                <div>
+                    <div class="CardNumbers" id="totalEmployes">0</div>
+                    <div class="CardName">Employe</div>
+                </div>
+                <div class="CardIcon"><img src="assets/icon/person.svg" alt="icon/person"></div>
+            </div>
+
+            <div class="Card">
+                <div>
+                    <div class="CardNumbers" id="totalTeams">0</div>
+                    <div class="CardName">Team</div>
+                </div>
+                <div class="CardIcon"><img src="assets/icon/people.svg" alt="icon/people"></div>
+            </div>
+
+            <div class="Card">
+                <div>
+                    <div class="CardNumbers" id="totalProcessTasks">0</div>
+                    <div class="CardName">Proscess Task</div>
+                </div>
+                <div class="CardIcon"><img src="assets/icon/Process.svg" alt="icon/Process"></div>
+            </div>
+
+            <div class="Card">
+                <div>
+                    <div class="CardNumbers" id="totalCompletedTasks">0</div>
+                    <div class="CardName">Task Done</div>
+                </div>
+                <div class="CardIcon"><img src="assets/icon/Final Task.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="ChartBox">
+            <div class="Chart"> <canvas id="Chart-1"></canvas> </div>
+            <div class="Chart"> <canvas id="Chart-2"></canvas> </div>
+        </div>
+        
+        </div>
+        <!--==================================TeamsManagement============================================-->
+
+        <div class="ContentItem" id="TeamsManagement" style="display:none;">
+
+        </div>
+        <!--==================================EmployesManagement============================================-->
+        
+        <div class="ContentItem" id="EmployesManagement" style="display:none;">
+            <!-- هنا هنبدا في الجدول -->
+
+            <div class="tableAll">
+                <table>
+                <thead>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Role</td>
+                    <td>Team</td>
+                    <td>Salary</td>
+                    <td>Action</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Abdullah</td>
+                        <td>Abdullah@gmail.com</td>
+                        <td>Dev</td>
+                        <td>Taskmind</td>
+                        <td>600000</td>
+                        <td>Edit Delete</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Ahmed</td>
+                        <td>Ahmed@gmail.com</td>
+                        <td>Marketing</td>
+                        <td>Alpha</td>
+                        <td>80000</td>
+                        <td>Edit Delete</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Mohamed</td>
+                        <td>Mohamed@gmail.com</td>
+                        <td>Marketing</td>
+                        <td>Alpha</td>
+                        <td>600000</td>
+                        <td>Edit Delete</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+
+        </div>
+        <!--==================================TaskManagement============================================-->
+        
+        <div class="ContentItem" id="TaskManagement" style="display:none;"></div>
+        <div class="ContentItem" id="Meeting" style="display:none;"></div>
+        <div class="ContentItem" id="AiAssistant" style="display:none;"></div>
+        <div class="ContentItem" id="Settings" style="display:none;"></div>
+        <div class="ContentItem" id="LogOut" style="display:none;"></div>
+        </div>
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="assets/ScriptDashBoard.js"></script>
+    <script type="module" src="assets/Chart.js"></script>
+</body>
+</html>

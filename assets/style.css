@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+.Task{
+    color: #ffffff;
+    font-size: 2rem;
+}
+.InContainer{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(0, 123, 255);
+    border-left: 10px solid rgba(121, 120, 123, 0);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.InContainer.active{
+    width: 70px;
+}
+
+.InContainer ul{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.InContainer ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.InContainer ul li:hover{
+    background-color: rgb(0, 0, 0);
+    filter: invert(1) brightness(2);
+}
+.InContainer ul li:nth-child(1){
+    margin-bottom: 60px;
+    pointer-events: none;
+    top: 9px;
+    padding: 0px 1px;
+}
+
+.InContainer ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #000000;
+}
+.InContainer ul li:hover a{
+    color: rgb(0, 166, 255);
+    
+}
+
+.InContainer ul li a .Icon-SideBar img{
+    position: relative;
+    padding-top: 5px;
+    min-width: 60px;
+    height: 40.4px;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+}
+.InContainer ul li a .Name-SideBar{
+    font-size: 1.28rem;
+    color: #ffffff;
+}
+
+.InContainer ul li a .Name-SideBar{
+    position: relative;
+    display: block;
+    padding: 0px 0px 10px ;
+    height: 60px;
+    line-height: 50px;
+    text-align: start;
+    white-space: nowrap;
+}
+.InContainer ul li:hover a::before{
+    content: '' ;
+    position: absolute;
+    right: 0;
+    top: -50px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0px 10px rgb(0, 0, 0);
+    pointer-events: none;
+}
+.InContainer ul li:hover a::after{
+    content: '' ;
+    position: absolute;
+    right: 0;
+    bottom: -50px ;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0px 10px rgb(0, 0, 0);
+    pointer-events: none;
+}
+
+.InContainer ul li a.active {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 166, 255);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-weight: bold;
+}
+.InContainer ul li a.active::before{
+    content: '' ;
+    position: absolute;
+    right: 0;
+    top: -50px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0px 10px rgb(0, 0, 0);
+    pointer-events: none;
+}
+
+.InContainer ul li a.active::after{
+    content: '' ;
+    position: absolute;
+    right: 0;
+    bottom: -50px ;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0px 10px rgb(0, 0, 0);
+    pointer-events: none;
+}
+
+.InContainer img{
+    filter: invert(1) brightness(2);
+}
+
+.Main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    transition: 0.5s;
+    background-color: rgb(255, 255, 255);
+}
+
+.Main.active{
+    width: calc(100% - 70px);
+    left: 70px;
+}
+
+.Topbar{
+    width: 100%;
+    height: 60px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ToggleMenu{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.Search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.Search label{
+    position: relative;
+    width: 100%;
+}
+.Search label input{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid black;
+}
+.Search label img{
+    position: absolute;
+    top: -0.3px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 1.2rem;
+}
+.UserEdit{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.ContentItem{
+    /*=========================================================================================*/
+}
+
+
+
+.CardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    grid-gap: 30px;
+}
+.CardIcon{
+    height: 51px;
+    width: 51px;
+    filter: invert(1) brightness(0.3);
+}
+.CardBox .Card{
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.CardBox .Card .CardNumbers{
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: rgb(0, 123, 255);
+}
+.CardBox .Card .CardName{
+    color: rgb(78, 78, 78);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.CardBox .Card:hover{
+    background-color: rgb(0, 123, 255);
+}
+
+.CardBox .Card:hover .CardNumbers,
+.CardBox .Card:hover .CardName{
+    color: white;
+}
+.CardBox .Card:hover .CardIcon{
+    filter: invert(1) brightness(2);
+}
+
+.ChartBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+}
+
+.ChartBox .Chart{
+    position: relative;
+    background: #ffffff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgb(0, 0, 0,0.08);
+    border-radius: 20px;
+    border: 1px solid rgb(0, 123, 255);
+}
+
+/*=======================*/
+
+
